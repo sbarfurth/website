@@ -34,6 +34,9 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 import {output as pagespeed} from 'psi';
 import pkg from './package.json';
 
+import autoprefixer from 'autoprefixer';
+import lost from 'lost';
+
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
@@ -82,6 +85,11 @@ gulp.task('styles', () => {
     'bb >= 10'
   ];
 
+  const POSTCSS_PLUGINS = [
+    lost(),
+    autoprefixer({browsers: AUTOPREFIXER_BROWSERS})
+  ];
+
   // For best performance, don't add Sass partials to `gulp.src`
   return gulp.src([
     'app/styles/**/*.scss',
@@ -92,7 +100,7 @@ gulp.task('styles', () => {
     .pipe($.sass({
       precision: 10
     }).on('error', $.sass.logError))
-    .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
+    .pipe($.postcss(POSTCSS_PLUGINS))
     .pipe(gulp.dest('.tmp/styles'))
     // Concatenate and minify styles
     .pipe($.if('*.css', $.cssnano()))
