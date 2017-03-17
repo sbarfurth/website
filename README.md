@@ -8,6 +8,8 @@ This is my custom version of Google's web-starter kit. I made the following modi
 * Use normalize.css by default
 * Got rid of Material Design as default
 
+For usage documentation, please visit [the original repo by Google](https://github.com/google/web-starter-kit).
+
 ## License
 
 Apache 2.0
