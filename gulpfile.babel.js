@@ -36,6 +36,7 @@ import pkg from './package.json';
 
 import autoprefixer from 'autoprefixer';
 import lost from 'lost';
+import atImport from 'postcss-import';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -86,6 +87,7 @@ gulp.task('styles', () => {
   ];
 
   const POSTCSS_PLUGINS = [
+    atImport(),
     lost(),
     autoprefixer({browsers: AUTOPREFIXER_BROWSERS})
   ];

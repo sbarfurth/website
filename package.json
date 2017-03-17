@@ -26,6 +26,7 @@
     "gulp-uglify": "^1.5.4",
     "gulp-useref": "^3.1.0",
     "lost": "^8.0.0",
+    "postcss-import": "^9.1.0",
     "psi": "^2.0.4",
     "run-sequence": "^1.0.1",
     "sw-precache": "^3.2.0",
@@ -40,5 +41,8 @@
   },
   "eslintConfig": {
     "extends": "google"
+  },
+  "dependencies": {
+    "normalize.css": "^5.0.0"
   }
 }
