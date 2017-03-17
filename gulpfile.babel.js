@@ -93,6 +93,7 @@ gulp.task('styles', () => {
   // For best performance, don't add Sass partials to `gulp.src`
   return gulp.src([
     'app/styles/**/*.scss',
+    'app/styles/**/*.sass',
     'app/styles/**/*.css'
   ])
     .pipe($.newer('.tmp/styles'))
