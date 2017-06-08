@@ -7,6 +7,7 @@ This is my custom version of Google's web-starter kit. I made the following modi
 * Include the lost grid system via PostCSS
 * Use normalize.css by default
 * Got rid of Material Design as default
+* Using Pug (former Jade) for templating
 
 For usage documentation, please visit [the original repo by Google](https://github.com/google/web-starter-kit).
 
