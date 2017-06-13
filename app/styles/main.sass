@@ -18,11 +18,21 @@ body
 
 .logo
   display: block
+  animation: flyIn 500ms
 
   img
     width: 104px
     height: auto
     margin-bottom: 40px
+
+@keyframes flyIn
+  0%
+    transform: translate3d(0, -154px, 0)
+    opacity: 0
+
+  100%
+    transform: translate3d(0, 0, 0)
+    opacity: 1
 
 h1
   font-weight: 300
