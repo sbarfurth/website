@@ -18,16 +18,45 @@ body
 
 .logo
   display: block
-  animation: flyIn 500ms
 
-  img
+  svg
     width: 104px
     height: auto
     margin-bottom: 40px
 
-@keyframes flyIn
+    .square
+      animation: showSquare 300ms
+      transform-origin: center
+
+    .letter-s
+      opacity: 0
+      animation: showLetterS 300ms 300ms
+      animation-fill-mode: forwards
+
+    .letter-b
+      opacity: 0
+      animation: showLetterB 300ms 600ms
+      animation-fill-mode: forwards
+
+@keyframes showSquare
   0%
-    transform: translate3d(0, -154px, 0)
+    transform: scale3d(0, 0, 0)
+
+  100%
+    transform: scale3d(1, 1, 1)
+
+@keyframes showLetterS
+  0%
+    transform: translate3d(0, -20px, 0)
+    opacity: 0
+
+  100%
+    transform: translate3d(0, 0, 0)
+    opacity: 1
+
+@keyframes showLetterB
+  0%
+    transform: translate3d(0, 20px, 0)
     opacity: 0
 
   100%
