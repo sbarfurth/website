@@ -269,7 +269,9 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
 // Deployment task
 gulp.task('deploy', ['default'], () => {
   return gulp.src('dist/**/*')
-    .pipe($.ghPages());
+    .pipe($.ghPages({
+      branch: 'master'
+    }));
 });
 
 // Load custom tasks from the `tasks` directory
