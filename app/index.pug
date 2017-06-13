@@ -1,7 +1,8 @@
 extends layouts/layout.pug
 
 block content
-  img.logo(src="/images/logo.svg" alt="Logo")
+  a.logo(href="/")
+    img(src="/images/logo.svg" alt="Logo")
 
   h1
     | Ich bin
@@ -14,14 +15,14 @@ block content
 
   ul
     li
-      a(href="#")
+      a(href="#" target="_blank")
         img(src="/images/icons/twitter.svg" alt="Twitter")
         | sebibarfurth
     li
-      a(href="#")
+      a(href="#" target="_blank")
         img(src="/images/icons/github.svg" alt="Github")
         | sebastianbarfurth
     li
-      a(href="#")
+      a(href="#" target="_blank")
         img(src="/images/icons/instagram.svg" alt="Instagram")
         | sebastianbarfurth
