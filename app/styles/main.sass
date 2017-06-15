@@ -17,25 +17,31 @@ body
   margin: 0 auto
 
 .logo
-  display: block
+  display: inline-block
+
+  &:hover svg
+    transform: translateY(-3px)
 
   svg
     width: 104px
     height: auto
     margin-bottom: 40px
+    transition: all 300ms
 
     .square
-      animation: showSquare 300ms
+      animation: showSquare 600ms
       transform-origin: center
+      transform: scale(.5)
+      animation-fill-mode: forwards
 
     .letter-s
       opacity: 0
-      animation: showLetterS 300ms 300ms
+      animation: showLetterS 600ms 600ms
       animation-fill-mode: forwards
 
     .letter-b
       opacity: 0
-      animation: showLetterB 300ms 600ms
+      animation: showLetterB 600ms 600ms
       animation-fill-mode: forwards
 
 @keyframes showSquare
@@ -43,7 +49,7 @@ body
     transform: scale3d(0, 0, 0)
 
   100%
-    transform: scale3d(1, 1, 1)
+    transform: scale(1)
 
 @keyframes showLetterS
   0%
@@ -94,9 +100,13 @@ ul
       &:hover
         opacity: .6
 
+        img
+          margin-right: 38px
+
       img
         display: inline
         vertical-align: middle
         margin-right: 35px
         width: 30px
         height: auto
+        transition: all 300ms
