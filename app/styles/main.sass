@@ -1,4 +1,5 @@
 @import "normalize.css"
+@import "animations"
 
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400')
 
@@ -25,7 +26,6 @@ body
   svg
     width: 104px
     height: auto
-    margin-bottom: 40px
     transition: all 300ms
 
     .square
@@ -44,36 +44,12 @@ body
       animation: showLetterB 600ms 600ms
       animation-fill-mode: forwards
 
-@keyframes showSquare
-  0%
-    transform: scale3d(0, 0, 0)
-
-  100%
-    transform: scale(1)
-
-@keyframes showLetterS
-  0%
-    transform: translate3d(0, -20px, 0)
-    opacity: 0
-
-  100%
-    transform: translate3d(0, 0, 0)
-    opacity: 1
-
-@keyframes showLetterB
-  0%
-    transform: translate3d(0, 20px, 0)
-    opacity: 0
-
-  100%
-    transform: translate3d(0, 0, 0)
-    opacity: 1
-
 h1
   font-weight: 300
   color: rgba(0, 0, 0, .56)
   font-size: 3em
   max-width: 1000px
+  margin-top: 80px
 
   strong
     font-weight: 400
