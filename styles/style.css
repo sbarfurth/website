@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400");
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  color: rgba(0, 0, 0, 0.87);
+  line-height: 1.2;
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 85rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.logo:hover svg {
+  transform: translateY(-3px);
+}
+
+.logo svg {
+  width: 80px;
+  height: auto;
+  transition: all 300ms;
+}
+
+@media screen and (min-width: 30rem) {
+  .logo svg {
+    width: 90px;
+  }
+}
+
+@media screen and (min-width: 45rem) {
+  .logo svg {
+    width: 100px;
+  }
+}
+
+.logo svg .square {
+  animation: showSquare 600ms;
+  transform-origin: center;
+  transform: scale(0.5);
+  animation-fill-mode: forwards;
+}
+
+.logo svg .letter-s {
+  opacity: 0;
+  animation: showLetterS 600ms 600ms;
+  animation-fill-mode: forwards;
+}
+
+.logo svg .letter-b {
+  opacity: 0;
+  animation: showLetterB 600ms 600ms;
+  animation-fill-mode: forwards;
+}
+
+h1 {
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.56);
+  max-width: 1000px;
+  margin-top: 40px;
+  font-size: 2em;
+}
+
+@media screen and (min-width: 30rem) {
+  h1 {
+    font-size: 2.5em;
+    margin-top: 60px;
+  }
+}
+
+@media screen and (min-width: 45rem) {
+  h1 {
+    font-size: 3em;
+    margin-top: 80px;
+  }
+}
+
+h1 strong {
+  font-weight: 400;
+  color: #83AF9B;
+}
+
+h1 em {
+  color: rgba(0, 0, 0, 0.87);
+  font-style: normal;
+}
+
+ul {
+  margin-top: 40px;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+@media screen and (min-width: 30rem) {
+  ul {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (min-width: 45rem) {
+  ul {
+    margin-top: 80px;
+  }
+}
+
+ul li {
+  margin-top: 20px;
+}
+
+ul li a {
+  font-size: 1.3em;
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none;
+  transition: all 200ms ease;
+}
+
+@media screen and (min-width: 30rem) {
+  ul li a {
+    font-size: 1.4em;
+  }
+}
+
+@media screen and (min-width: 45rem) {
+  ul li a {
+    font-size: 1.5em;
+  }
+}
+
+ul li a:hover {
+  opacity: 0.6;
+}
+
+ul li a:hover img {
+  margin-right: 38px;
+}
+
+ul li a img {
+  display: inline;
+  vertical-align: middle;
+  margin-right: 35px;
+  width: 1.25em;
+  height: auto;
+  transition: all 300ms;
+}
+
+@keyframes showSquare {
+  0% {
+    transform: scale3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes showLetterS {
+  0% {
+    transform: translate3d(0, -20px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes showLetterB {
+  0% {
+    transform: translate3d(0, 20px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
