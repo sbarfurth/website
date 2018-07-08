@@ -1,10 +1,22 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400');
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
   color: rgba(0, 0, 0, 0.87);
+  background: url('/images/background.svg') right bottom/auto 80% no-repeat;
   line-height: 1.2;
-  padding: 50px 0;
+  padding: 90px 0;
 }
 
 .container {
@@ -15,164 +27,65 @@ body {
 
 .logo {
   display: inline-block;
+  color: #1b3c59;
+  font-weight: 900;
+  text-decoration: none;
+  font-size: 3em;
+  white-space: normal;
+  margin: 0;
 }
 
-.logo:hover svg {
-  transform: translateY(-3px);
+.logo span.accent {
+  color: #a6ed8e;
 }
 
-.logo svg {
-  width: 80px;
-  height: auto;
-  transition: all 300ms;
+.logo span.muted {
+  color: #456173;
 }
 
-@media screen and (min-width: 30rem) {
-  .logo svg {
-    width: 90px;
-  }
+.bio {
+  margin-top: 3rem;
 }
 
-@media screen and (min-width: 45rem) {
-  .logo svg {
-    width: 100px;
-  }
-}
-
-.logo svg .square {
-  animation: showSquare 600ms;
-  transform-origin: center;
-  transform: scale(0.5);
-  animation-fill-mode: forwards;
-}
-
-.logo svg .letter-s {
-  opacity: 0;
-  animation: showLetterS 600ms 600ms;
-  animation-fill-mode: forwards;
-}
-
-.logo svg .letter-b {
-  opacity: 0;
-  animation: showLetterB 600ms 600ms;
-  animation-fill-mode: forwards;
-}
-
-h1 {
+.bio p {
+  color: #363636;
+  font-size: 1.75em;
   font-weight: 300;
-  color: rgba(0, 0, 0, 0.56);
-  max-width: 1000px;
-  margin-top: 40px;
-  font-size: 2em;
+  line-height: 1.25em;
+  margin: 0;
 }
 
-@media screen and (min-width: 30rem) {
-  h1 {
-    font-size: 2.5em;
-    margin-top: 60px;
-  }
-}
-
-@media screen and (min-width: 45rem) {
-  h1 {
-    font-size: 3em;
-    margin-top: 80px;
-  }
-}
-
-h1 strong {
-  font-weight: 400;
-  color: #83af9b;
-}
-
-h1 em {
-  color: rgba(0, 0, 0, 0.87);
+.bio p em {
+  font-weight: 500;
+  color: #1b3c59;
   font-style: normal;
 }
 
-ul {
-  margin-top: 40px;
+nav {
+  margin-top: 6rem;
   list-style-type: none;
   padding-left: 0;
+  width: auto;
+  display: inline-flex;
+  flex-direction: column;
 }
 
-@media screen and (min-width: 30rem) {
-  ul {
-    margin-top: 60px;
-  }
-}
-
-@media screen and (min-width: 45rem) {
-  ul {
-    margin-top: 80px;
-  }
-}
-
-ul li {
-  margin-top: 20px;
-}
-
-ul li a {
-  font-size: 1.3em;
-  color: rgba(0, 0, 0, 0.87);
+nav a {
+  display: inline-flex;
+  font-size: 1.75em;
+  color: #1b3c59;
+  font-weight: 500;
   text-decoration: none;
-  transition: all 200ms ease;
+  margin-top: 2.25rem;
 }
 
-@media screen and (min-width: 30rem) {
-  ul li a {
-    font-size: 1.4em;
-  }
+nav a:first-child {
+  margin-top: 0;
 }
 
-@media screen and (min-width: 45rem) {
-  ul li a {
-    font-size: 1.5em;
-  }
-}
-
-ul li a:hover {
-  opacity: 0.6;
-}
-
-ul li a:hover img {
-  margin-right: 38px;
-}
-
-ul li a img {
-  display: inline;
-  vertical-align: middle;
-  margin-right: 35px;
-  width: 1.25em;
+nav a svg {
+  margin-right: 1.5rem;
+  width: 1.75rem;
   height: auto;
-  transition: all 300ms;
-}
-
-@keyframes showSquare {
-  0% {
-    transform: scale3d(0, 0, 0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes showLetterS {
-  0% {
-    transform: translate3d(0, -20px, 0);
-    opacity: 0;
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-@keyframes showLetterB {
-  0% {
-    transform: translate3d(0, 20px, 0);
-    opacity: 0;
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
+  stroke: #456173;
 }
