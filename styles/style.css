@@ -24,7 +24,7 @@ body {
   }
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 62rem) {
   body {
     background: url('/images/background-desktop.svg') right bottom/90% no-repeat fixed;
   }
