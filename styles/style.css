@@ -14,13 +14,19 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
     'Open Sans', 'Helvetica Neue', sans-serif;
   color: rgba(0, 0, 0, 0.87);
-  background: url('/images/background.svg') right bottom/90% no-repeat fixed;
+  background: url('/images/background-mobile-portrait.svg') right bottom/auto 80% no-repeat fixed;
   line-height: 1.2;
 }
 
 @media (min-width: 36rem) {
   body {
-    background-size: auto 90%;
+    background: url('/images/background-desktop.svg') right bottom/90% no-repeat fixed;
+  }
+}
+
+@media (min-width: 48rem) {
+  body {
+    background: url('/images/background-mobile-portrait.svg') right bottom/auto 95% no-repeat fixed;
   }
 }
 
