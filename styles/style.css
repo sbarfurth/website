@@ -11,29 +11,10 @@ body {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-    'Open Sans', 'Helvetica Neue', sans-serif;
-  color: rgba(0, 0, 0, 0.87);
-  background: url('/images/background-mobile-portrait.svg') right bottom/auto 80% no-repeat fixed;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #ffffff;
+  background: #022c43;
   line-height: 1.2;
-}
-
-@media (min-width: 36rem) {
-  body {
-    background: url('/images/background-desktop.svg') right bottom/90% no-repeat fixed;
-  }
-}
-
-@media (min-width: 48rem) {
-  body {
-    background: url('/images/background-mobile-portrait.svg') right bottom/auto 95% no-repeat fixed;
-  }
-}
-
-@media (min-width: 62rem) {
-  body {
-    background: url('/images/background-desktop.svg') right bottom/90% no-repeat fixed;
-  }
 }
 
 .container {
@@ -50,9 +31,9 @@ body {
 }
 
 .logo {
+  color: #ffffff;
   display: inline-block;
-  color: #1b3c59;
-  font-weight: 900;
+  font-weight: 700;
   text-decoration: none;
   font-size: 1.75em;
   margin: 0;
@@ -64,12 +45,9 @@ body {
   }
 }
 
-.logo span.accent {
-  color: #a6ed8e;
-}
-
-.logo span.muted {
-  color: #456173;
+em {
+  color: #ffd700;
+  font-style: normal;
 }
 
 .bio {
@@ -77,10 +55,8 @@ body {
 }
 
 .bio p {
-  color: #363636;
   font-size: 1em;
-  font-weight: 300;
-  line-height: 1.25em;
+  line-height: 1.5em;
   margin: 0;
 }
 
@@ -88,12 +64,6 @@ body {
   .bio p {
     font-size: 1.75em;
   }
-}
-
-.bio p em {
-  font-weight: 500;
-  color: #1b3c59;
-  font-style: normal;
 }
 
 nav {
@@ -108,7 +78,7 @@ nav {
 nav a {
   display: inline-flex;
   font-size: 1em;
-  color: #1b3c59;
+  color: #ffffff;
   font-weight: 500;
   text-decoration: none;
   margin-top: 1rem;
@@ -129,7 +99,7 @@ nav a svg {
   margin-right: 1rem;
   width: 1rem;
   height: auto;
-  stroke: #456173;
+  stroke: #ffd700;
 }
 
 @media (min-width: 48rem) {
